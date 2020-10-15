@@ -94,7 +94,7 @@ void Glcd_ClearScreen(void)
 
 int main()
 {
-	unsigned char i;
+    unsigned char i;
 	
     GlcdDataBusDirnReg = 0x00;  // Configure all the LCD pins as output
     GlcdCtrlBusDirnReg = 0x00;  // Configure the Ctrl pins as output
@@ -117,8 +117,8 @@ int main()
     Glcd_SelectHL(); 			// Select HL
     Glcd_CmdWrite(0xb8);       	//Line1
     Glcd_CmdWrite(0x40);       	//Col 0 
-	for(i = 1; i <= 8; i++)
-		Glcd_DisplayChar(blank);    //turn off all pixels
+    for(i = 1; i <= 8; i++)
+	Glcd_DisplayChar(blank);    //turn off all pixels
         
        
     Glcd_SelectHL(); // Display HELLO on HL, Page1 (Line1)
